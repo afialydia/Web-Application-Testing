@@ -29,13 +29,15 @@ import Dashboard from './components/Dashboard';
 
 
 function App() {
-  
+  const [balls, setBalls] = useState(0);
+    const [strikes, setStrikes] = useState(0);
 
   
   return (
    <div>
      <h1>Welcome to the Ball Game</h1>
-     <Dashboard />
+     <Dashboard strikes={strikes} balls={balls} setStrikes={setStrikes} setBalls={setBalls}/>
+     <Display strikes={strikes} balls={balls} />
 
    </div>
   );

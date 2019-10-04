@@ -1,11 +1,9 @@
-import React, {useState} from 'react';
-import Display from './Display'
+import React from 'react';
 
 
 const Dashboard = props => {
 
-    const [balls, setBalls] = useState(0);
-    const [strikes, setStrikes] = useState(0)
+    
     
     const addBall = balls => {
         if (balls < 4) {
@@ -35,23 +33,22 @@ const Dashboard = props => {
         return strikesBalls = 0;
     };
 
+   
     return(
         <>
         
         <p>Hello from Dashboard</p>
-        <button onClick={ () => setBalls(addBall)}>Ball</button>
+        <button onClick={ () => props.setBalls(addBall)}>Ball</button>
 
-        <button onClick={ () => setStrikes(addStrike)}>Strike</button>
+        <button onClick={ () => props.setStrikes(addStrike)}>Strike</button>
 
-        <button onClick={ () => setStrikes (addHit(strikes), setBalls(addHit))}>hit</button>
+        <button onClick={ () => props.setStrikes (addHit(props.strikes), props.setBalls(addHit))}>hit</button>
         
-        <button onClick={ () => setStrikes(addFoul)}>Foul</button>
+        <button onClick={ () => props.setStrikes(addFoul)}>Foul</button>
         
-        <Display 
-        />
+      
        
        
-        <p>Balls: {balls}</p><p>Strikes: {strikes}</p>
  </>
     )
 

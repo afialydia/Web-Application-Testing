@@ -6,8 +6,8 @@ const Display = props => {
     return(
         <>
         <p>Hello from Display</p>
-        {/* <p>Balls: {props.balls} </p>
-        <p>Strikes: {props.strikes}</p>     */}
+        <p>Balls: {props.balls} </p>
+        <p>Strikes: {props.strikes}</p>    
         
             </>
     )
