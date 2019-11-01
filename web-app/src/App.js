@@ -30,7 +30,7 @@ import Dashboard from './components/Dashboard';
 
 function App() {
   const [balls, setBalls] = useState(0);
-    const [strikes, setStrikes] = useState(0);
+  const [strikes, setStrikes] = useState(0);
 
   
   return (
